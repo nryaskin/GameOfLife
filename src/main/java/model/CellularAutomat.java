@@ -57,6 +57,25 @@ public class CellularAutomat implements java.io.Serializable {
 		updateCount();
 	}
 
+	public CellularAutomat(int width, int height, List<Cell> cells){
+
+		try {
+			board = Board.init(width, height);
+		}
+		catch(Exception ex) {
+			board = Board.getBoard();
+		}
+
+		this.maxX = width;
+		this.maxY = height;
+		this.cells = cells;
+		updateCount();
+
+	}//TODO: test how it works
+	// maybe it'll work
+
+
+
 	void updateCount() {
 		countPlants = 0; countHerbivorous = 0; countPredators = 0;
 		for(Cell c : cells) {
