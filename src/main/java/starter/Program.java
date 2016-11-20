@@ -10,11 +10,14 @@ public class Program {
 	static int Height = 25;
 
 	public static void main(String[] args) {
+
+
 		System.out.println("run");
 		CellularAutomat a = new CellularAutomat(Width, Height);
 		Visualization v = Visualization.getVisualization();
 
 		int test = 0;
+
 
 		try {
 			int i = 0;
@@ -30,8 +33,8 @@ public class Program {
 					interaction.Serialization.save(a, ".\\tmp\\cellular.ser");
 					System.out.println("END");
 				break;
-				}
-				*/
+				}*/
+
 				i++;
 			}
 		}
