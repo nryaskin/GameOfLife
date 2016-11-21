@@ -1,31 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gameoflife name="testExperiment">
 <map>
-<height>100</height>
-<width>80</width>
-<speed>1</speed>
+	<height>225</height>
+	<width>80</width>
+	<speedSimulation>1</speedSimulation>
 </map>
 <plants count="6">
-<health>
-15
-</health>
-<youth>10</youth>
-<maturity>10</maturity>
-<oldness>10</oldness>
+	<health>15</health>
+	<age>
+		<youth>3</youth>
+		<maturity>5</maturity>
+		<oldness>12</oldness>
+	</age>
 </plants>
 <herbivorous count="14">
-<health>15</health>
-<youth>10</youth>
-<maturity>10</maturity>
-<oldness>10</oldness>
-<strength>13</strength>
-<courage>12</courage>
-<speed>12</speed>
-<hunger>80</hunger>
-<firsthunger>10</firsthunger>
-<secondhunger>60</secondhunger>
+	<health>15</health>
+	<age>
+		<youth>3</youth>
+		<maturity>5</maturity>
+		<oldness>12</oldness>
+	</age>
+	<strength>13</strength>
+	<courage>12</courage>
+	<speed>12</speed>
+	<hunger>80</hunger>
+	<firsthunger>10</firsthunger>
+	<secondhunger>60</secondhunger>
 </herbivorous>
-<predators>
-
+<predators count="10">
+	<health>15</health>
+	<age>
+		<youth>3</youth>
+		<maturity>5</maturity>
+		<oldness>12</oldness>
+	</age>
+	<strength>13</strength>
+	<courage>12</courage>
+	<speed>12</speed>
+	<hunger>80</hunger>
+	<firsthunger>10</firsthunger>
+	<secondhunger>60</secondhunger>
+	<sight>20</sight>
 </predators>
 </gameoflife>
