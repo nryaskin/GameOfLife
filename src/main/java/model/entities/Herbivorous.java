@@ -14,6 +14,7 @@ public class Herbivorous extends Specimen {
 		this.rulesOneself.add(new RuleStarve());
 		this.rulesOneself.add(new RuleBirth());
 		this.rulesOneself.add(new RuleMove2Eat());
+		this.rulesOneself.add(new RuleBite());
 
 		this.maxSpeed = 20;
 		this.currentSpeed = this.maxSpeed;

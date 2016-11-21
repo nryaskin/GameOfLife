@@ -18,8 +18,6 @@ public class Program {
 		CellularAutomat a = new CellularAutomat(Width, Height);
 		Visualization v = Visualization.getVisualization();
 
-
-
 		try {
 			int i = 0;
 			while(a.getCountObject() != 0) {
@@ -31,6 +29,7 @@ public class Program {
 
 				i++;
 			}
+			v.toReflect(a);
 		}
 		catch(Exception ex) {
 			ex.printStackTrace();

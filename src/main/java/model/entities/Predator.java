@@ -2,6 +2,7 @@ package model.entities;
 
 import model.rules.RuleAging;
 import model.rules.RuleBirth;
+import model.rules.RuleBite;
 import model.rules.RuleMove2Eat;
 import model.rules.RuleStarve;
 
@@ -15,6 +16,7 @@ public class Predator extends Specimen {
 		this.rulesOneself.add(new RuleStarve());
 		this.rulesOneself.add(new RuleBirth());
 		this.rulesOneself.add(new RuleMove2Eat());
+		this.rulesOneself.add(new RuleBite());
 		this.maxSpeed = 20;
 		this.currentSpeed = this.maxSpeed;
 		this.type = Type.PREDATOR;

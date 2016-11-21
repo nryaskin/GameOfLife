@@ -36,7 +36,7 @@ public class Specimen extends Cell {
 		limitHunger1 = 5;
 		limitHunger2 = 20; // 10;
 
-		periodBirth = 3;
+		periodBirth = 5;
 	}
 	
 	protected int maxHealth;
@@ -62,8 +62,10 @@ public class Specimen extends Cell {
 		super(x,y);
 		
 		rulesOneself = new ArrayList();
-		this.age = 0;
-		this.hunger = 0;	
+		age = 0;
+		hunger = 0;
+		basicHealth = 10;
+		basicStrength = 4;
 		lastBirth = 0;		
 	}
 	
@@ -116,13 +118,25 @@ public class Specimen extends Cell {
 	public void hunger() {
 		hunger++;
 	}
-	/*public void step() {
-		
-		for(Rule r : rulesOneself) {
-			r.apply(this);
-		}
-	}*/
 	
+	public void getEat(int eat) {
+		if(hunger >= eat) {
+			hunger -= eat;
+		}
+		else {
+			hunger = 0;
+		}
+	}
+	
+	public int getStrength() {
+		return basicStrength;
+	}
+	
+	public int getHealth() {
+		return basicHealth;
+	}
+	
+
 	@Override
 	public void applyRule(Board b) {
 		//rulesOneself
