@@ -10,8 +10,10 @@ import java.io.*;
  */
 public class Serialization {
 
+    private static String dir = ".\\saves\\";
+
     public static void save(CellularAutomat ca, String path) throws IOException {
-        FileOutputStream fileOut = new FileOutputStream(path);
+        FileOutputStream fileOut = new FileOutputStream(dir+path);
 
         ObjectOutputStream  out = new ObjectOutputStream(fileOut);
         out.writeObject(ca);
@@ -21,7 +23,7 @@ public class Serialization {
 
     public static CellularAutomat load(String path) throws IOException, ClassNotFoundException {
         CellularAutomat  ca = null;
-        FileInputStream fileIn = new FileInputStream(path);
+        FileInputStream fileIn = new FileInputStream(dir + path);
         ObjectInputStream in = new ObjectInputStream(fileIn);
         ca = (CellularAutomat)in.readObject();
         in.close();
