@@ -11,9 +11,12 @@ public class Program {
 
 	public static void main(String[] args) {
 
-		//interaction.UserConfigurationBuilder conf = new interaction.UserConfigurationBuilder("testing_config.txt");
-		//conf.generate();
-
+		interaction.UserConfigurationBuilder conf = new interaction.UserConfigurationBuilder("testing_config.txt");
+		try {
+			conf.generate();
+		}catch(Exception ex){
+			ex.getStackTrace();
+		}
 		System.out.println("run");
 		CellularAutomat a = new CellularAutomat(Width, Height);
 		Visualization v = Visualization.getVisualization();
