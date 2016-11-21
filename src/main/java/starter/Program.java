@@ -11,12 +11,13 @@ public class Program {
 
 	public static void main(String[] args) {
 
+		//interaction.UserConfigurationBuilder conf = new interaction.UserConfigurationBuilder("testing_config.txt");
+		//conf.generate();
 
 		System.out.println("run");
 		CellularAutomat a = new CellularAutomat(Width, Height);
 		Visualization v = Visualization.getVisualization();
 
-		int test = 0;
 
 
 		try {
@@ -26,14 +27,7 @@ public class Program {
 				v.toReflect(a);
 				a.step(v);
 				
-				Thread.sleep(250);				
-				/*
-				if(test++ == 100){
-					System.out.println("SERIALIZTION");
-					interaction.Serialization.save(a, ".\\tmp\\cellular.ser");
-					System.out.println("END");
-				break;
-				}*/
+				Thread.sleep(250);
 
 				i++;
 			}

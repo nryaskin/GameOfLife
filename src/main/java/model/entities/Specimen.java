@@ -8,9 +8,18 @@ import model.Board;
 public class Specimen extends Cell {
 	
 	public List<Rule> rulesOneself;
-	
+
+	//TODO: make it work with this fields
+	protected int youthLimit;
+    protected int maturityLimit;
+	protected int oldLimit;
+    protected int limitHunger1a;
+    protected int limitHunger2a;
+
+
+
 	public static final int ageYouthLimit; // after Manutiry  max health, strength, speed +25%?
-	public 	static final int ageMaturityLimit; // min health -25%
+	public static final int ageMaturityLimit; // min health -25%
 	public static final int ageOldLimit; //after only death :-)
 	
 	public static final int limitHunger1;
@@ -26,7 +35,7 @@ public class Specimen extends Cell {
 		
 		limitHunger1 = 5;
 		limitHunger2 = 20; // 10;
-		
+
 		periodBirth = 3;
 	}
 	
@@ -121,6 +130,46 @@ public class Specimen extends Cell {
 			r.apply(this, b);
 		}
 	}
-	
-	
+
+
+    public void setHealth(int health) {
+        this.basicHealth = health;
+    }
+
+	public void setYouth(int youth) {
+		this.youthLimit = youth;
+	}
+
+    public void setMaturity(int maturity) {
+        this.maturityLimit = maturity;
+    }
+
+    public void setOldness(int oldness) {
+        this.oldLimit = oldness;
+    }
+
+    public void setHunger(int hunger) {
+        this.hunger = hunger;
+    }
+
+
+    public void setHungerFirstLimit(int hungerFirstLimit) {
+        this.limitHunger1a = hungerFirstLimit;
+    }
+
+    public void setHungerSecondLimit(int hungerSecondLimit) {
+        this.limitHunger2a = hungerSecondLimit;
+    }
+
+    public void setStrength(int strength) {
+        this.basicStrength = strength;
+    }
+
+    public void setSight(int sight) {
+        this.basicSight = sight;
+    }
+
+    public void setCourage(int courage) {
+        this.basicCourage = courage;
+    }
 }
